@@ -6,17 +6,15 @@ spring:
     name: PRODUCT-SERVICE
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/bouquet_product_db
-    username: postgres
-    password: your_postgres_password
+    url: jdbc:mysql://localhost:3306/bouquet_product_db
+    username: root
+    password: root
 
   jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
 
 eureka:
   client:

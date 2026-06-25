@@ -8,15 +8,11 @@ import com.bouquetcake.deliveryservice.entity.DeliveryStatus;
 
 public interface DeliveryService {
 
-    Delivery assignDelivery(DeliveryRequest request);
+    Delivery createDelivery(DeliveryRequest request);
 
     List<Delivery> getAllDeliveries();
 
     Delivery getDeliveryById(Long id);
 
-    List<Delivery> getDeliveriesByDeliveryPerson(Long deliveryPersonId);
-
-    List<Delivery> getDeliveriesByOrder(Long orderId);
-
-    Delivery updateDeliveryStatus(Long id, DeliveryStatus status);
+    Delivery updateStatus(Long id, DeliveryStatus status);
 }

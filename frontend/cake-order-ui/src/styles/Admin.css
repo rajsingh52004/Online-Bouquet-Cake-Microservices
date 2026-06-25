@@ -1,0 +1,154 @@
+.admin-page {
+  min-height: 86vh;
+  padding: 80px 70px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 77, 141, 0.22), transparent 30%),
+    linear-gradient(135deg, #08080d, #12121c);
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.admin-header span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.admin-header h1 {
+  color: var(--text);
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.admin-header p {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.admin-card,
+.admin-form,
+.admin-table-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  /* backdrop-filter: blur(18px); */
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.admin-card {
+  padding: 38px;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.admin-form {
+  width: 520px;
+  margin: auto;
+  padding: 35px;
+  display: grid;
+  gap: 16px;
+}
+
+.admin-form h1 {
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  outline: none;
+}
+
+.admin-form textarea {
+  min-height: 110px;
+}
+
+.admin-form option {
+  background: #12121c;
+}
+
+.admin-form button {
+  border: none;
+  padding: 15px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--pink), #ff7aa8);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.admin-table th {
+  color: var(--gold);
+}
+
+.delete-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255, 77, 141, 0.18);
+  color: var(--pink);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .admin-page {
+    padding: 50px 22px;
+  }
+
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form {
+    width: 100%;
+  }
+}
+.admin-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255, 209, 102, 0.16);
+  color: var(--gold);
+  font-weight: 900;
+  cursor: pointer;
+}

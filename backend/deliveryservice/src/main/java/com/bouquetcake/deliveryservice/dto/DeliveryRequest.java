@@ -3,7 +3,7 @@ package com.bouquetcake.deliveryservice.dto;
 public class DeliveryRequest {
 
     private Long orderId;
-    private Long deliveryPersonId;
+    private String deliveryAddress;
 
     public Long getOrderId() {
         return orderId;
@@ -13,11 +13,11 @@ public class DeliveryRequest {
         this.orderId = orderId;
     }
 
-    public Long getDeliveryPersonId() {
-        return deliveryPersonId;
+    public String getDeliveryAddress() {
+        return deliveryAddress;
     }
 
-    public void setDeliveryPersonId(Long deliveryPersonId) {
-        this.deliveryPersonId = deliveryPersonId;
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
     }
 }

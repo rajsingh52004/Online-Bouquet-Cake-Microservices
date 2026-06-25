@@ -1,0 +1,69 @@
+.auth-page {
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 77, 141, 0.22), transparent 30%),
+    linear-gradient(135deg, #08080d, #12121c);
+}
+
+.auth-card {
+  width: 430px;
+  padding: 38px;
+  border-radius: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  /* backdrop-filter: blur(18px); */
+  box-shadow: var(--shadow);
+}
+
+.auth-card span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.auth-card h1 {
+  margin: 10px 0 28px;
+  font-size: 42px;
+  color: var(--text);
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.auth-card input::placeholder {
+  color: var(--muted);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--pink), #ff7aa8);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.auth-card p {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.auth-card a {
+  color: var(--gold);
+  font-weight: 900;
+}

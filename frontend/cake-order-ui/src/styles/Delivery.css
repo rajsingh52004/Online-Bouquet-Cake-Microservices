@@ -1,0 +1,150 @@
+.delivery-page {
+  min-height: 86vh;
+  padding: 80px 70px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 77, 141, 0.22), transparent 30%),
+    linear-gradient(135deg, #08080d, #12121c);
+}
+
+.delivery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.delivery-header span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.delivery-header h1 {
+  margin-top: 10px;
+  font-size: 48px;
+  color: var(--text);
+}
+
+.delivery-header p {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.delivery-form {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  /* backdrop-filter: blur(18px); */
+  padding: 22px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.delivery-form input {
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.delivery-form input::placeholder {
+  color: var(--muted);
+}
+
+.delivery-form button {
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--pink), #ff7aa8);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.delivery-list {
+  display: grid;
+  gap: 20px;
+}
+
+.delivery-card {
+  display: grid;
+  grid-template-columns: 130px 130px 1fr 180px 190px;
+  gap: 18px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  /* backdrop-filter: blur(18px); */
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.delivery-card span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.delivery-card h3,
+.delivery-card p {
+  margin-top: 8px;
+  color: var(--text);
+}
+
+.delivery-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.delivery-status.pending {
+  background: rgba(255, 209, 102, 0.16);
+  color: var(--gold);
+}
+
+.delivery-status.assigned {
+  background: rgba(80, 200, 255, 0.16);
+  color: #50c8ff;
+}
+
+.delivery-status.out_for_delivery {
+  background: rgba(153, 102, 255, 0.16);
+  color: #b79cff;
+}
+
+.delivery-status.delivered {
+  background: rgba(80, 255, 160, 0.16);
+  color: #50ffa0;
+}
+
+.delivery-card select {
+  padding: 13px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.delivery-card option {
+  background: #12121c;
+}
+
+@media (max-width: 1000px) {
+  .delivery-page {
+    padding: 50px 22px;
+  }
+
+  .delivery-form,
+  .delivery-card {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-form button {
+    padding: 15px;
+  }
+}

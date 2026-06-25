@@ -1,28 +1,26 @@
 server:
-  port: 8081
+  port: 8083
 
 spring:
   application:
     name: AUTH-SERVICE
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/bouquet_auth_db
-    username: postgres
-    password: your_postgres_password
+    url: jdbc:mysql://localhost:3306/bouquet_auth_db
+    username: root
+    password: root
 
   jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
+
+jwt:
+  secret: bouquetCakeJwtSecretKeyMustBeVeryLongForHS256Algorithm123456789
+  expiration: 86400000
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-
-jwt:
-  secret: bouquetCakeSecretKeyForJwtAuthenticationMustBeLongEnough123456
-  expiration: 86400000

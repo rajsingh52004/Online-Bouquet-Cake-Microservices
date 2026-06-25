@@ -17,19 +17,20 @@ import com.bouquetcake.deliveryservice.entity.Delivery;
 import com.bouquetcake.deliveryservice.entity.DeliveryStatus;
 import com.bouquetcake.deliveryservice.service.DeliveryService;
 
-import lombok.RequiredArgsConstructor;
-
 @RestController
-@RequestMapping("/api/deliveries")
-@RequiredArgsConstructor
+@RequestMapping("/deliveries")
 @CrossOrigin("*")
 public class DeliveryController {
 
     private final DeliveryService deliveryService;
 
-    @PostMapping("/assign")
-    public Delivery assignDelivery(@RequestBody DeliveryRequest request) {
-        return deliveryService.assignDelivery(request);
+    public DeliveryController(DeliveryService deliveryService) {
+        this.deliveryService = deliveryService;
+    }
+
+    @PostMapping
+    public Delivery createDelivery(@RequestBody DeliveryRequest request) {
+        return deliveryService.createDelivery(request);
     }
 
     @GetMapping
@@ -42,21 +43,11 @@ public class DeliveryController {
         return deliveryService.getDeliveryById(id);
     }
 
-    @GetMapping("/person/{deliveryPersonId}")
-    public List<Delivery> getDeliveriesByDeliveryPerson(@PathVariable Long deliveryPersonId) {
-        return deliveryService.getDeliveriesByDeliveryPerson(deliveryPersonId);
-    }
-
-    @GetMapping("/order/{orderId}")
-    public List<Delivery> getDeliveriesByOrder(@PathVariable Long orderId) {
-        return deliveryService.getDeliveriesByOrder(orderId);
-    }
-
     @PutMapping("/{id}/status")
-    public Delivery updateDeliveryStatus(
+    public Delivery updateStatus(
             @PathVariable Long id,
             @RequestParam DeliveryStatus status
     ) {
-        return deliveryService.updateDeliveryStatus(id, status);
+        return deliveryService.updateStatus(id, status);
     }
 }
